@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOTCOM COMPUTER | We Create Professionals | Paldi, Ahmedabad</title>
+<meta name="description" content="DOTCOM COMPUTER, Paldi, Ahmedabad: computer training since 2000. MS-Office, Advanced Excel, Tally Prime with GST, C, C++, Java, Python, Full-Stack Web Development, Data Science and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020; --bg2:#111833; --card:#161f3f; --text:#e8ecff; --muted:#9aa6d1;
+  --p1:#6c5cff; --p2:#00d4ff; --p3:#ff4fa3; --ok:#22c55e;
+  --grad:linear-gradient(135deg,var(--p1),var(--p2));
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1200px,100% - 32px);margin:auto}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+section{padding:90px 0;position:relative}
+.sec-title{text-align:center;margin-bottom:50px}
+.sec-title span{color:var(--p2);font-weight:600;letter-spacing:2px;font-size:.85rem;text-transform:uppercase}
+.sec-title h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:600;transition:.3s;border:none;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px rgba(108,92,255,.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,212,255,.5)}
+.btn-ghost{border:2px solid var(--p2);color:var(--p2)}
+.btn-ghost:hover{background:var(--p2);color:var(--bg)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:.3s}
+nav.scrolled{background:rgba(11,16,32,.85);backdrop-filter:blur(12px);box-shadow:0 5px 20px rgba(0,0,0,.3);padding:10px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.logo-icon{width:42px;height:42px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-size:1.2rem;animation:spin-slow 8s linear infinite}
+.logo-icon b{animation:spin-slow 8s linear infinite reverse}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-weight:500;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--grad);transition:.3s}
+.nav-links a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:none;color:var(--text);font-size:1.8rem;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.45;animation:float 12s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--p1);top:-100px;left:-100px}
+.b2{width:360px;height:360px;background:var(--p2);bottom:-80px;right:-60px;animation-delay:-4s}
+.b3{width:260px;height:260px;background:var(--p3);top:40%;left:45%;animation-delay:-8s;opacity:.25}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-40px) scale(1.1)}66%{transform:translate(-30px,30px) scale(.95)}}
+#particles{position:absolute;inset:0;z-index:0}
+.hero .container{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(108,92,255,.15);border:1px solid rgba(108,92,255,.4);padding:8px 18px;border-radius:50px;font-size:.9rem;margin-bottom:20px}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 1.5s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}100%{box-shadow:0 0 0 12px rgba(34,197,94,0)}}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;line-height:1.15;margin-bottom:20px}
+.typed{color:var(--p2);border-right:3px solid var(--p2);padding-right:4px;animation:blink .8s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero p{color:var(--muted);font-size:1.1rem;margin-bottom:32px;max-width:520px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.hero-stats h3{font-size:2rem;font-weight:800}
+.hero-stats p{margin:0;font-size:.9rem}
+
+/* animated computer illustration */
+.hero-art{position:relative;height:480px}
+.hero-art svg{width:100%;height:100%}
+.float-y{animation:fy 5s ease-in-out infinite}
+.float-y2{animation:fy 6s ease-in-out infinite -2s}
+.float-y3{animation:fy 4.5s ease-in-out infinite -1s}
+@keyframes fy{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.code-line{animation:typeLine 3s ease-in-out infinite;transform-origin:left}
+@keyframes typeLine{0%{transform:scaleX(0)}40%,80%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.orbit{animation:spin-slow 20s linear infinite;transform-origin:300px 240px}
+.cursor-blink{animation:blink 1s step-end infinite}
+.chart-bar{animation:grow 2.5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:bottom}
+@keyframes grow{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+
+/* MARQUEE */
+.marquee{background:var(--grad);padding:18px 0;overflow:hidden;transform:rotate(-1.5deg);margin:0 -20px}
+.marquee-track{display:flex;gap:50px;width:max-content;animation:scroll 30s linear infinite;font-weight:700;font-size:1.2rem;white-space:nowrap}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-art{position:relative;aspect-ratio:1;max-width:460px;margin:auto;width:100%}
+.ring{position:absolute;inset:0;border:2px dashed rgba(0,212,255,.35);border-radius:50%;animation:spin-slow 30s linear infinite}
+.ring.r2{inset:12%;border-color:rgba(108,92,255,.45);animation-direction:reverse;animation-duration:20s}
+.center-badge{position:absolute;inset:28%;border-radius:50%;background:var(--grad);display:grid;place-items:center;text-align:center;box-shadow:0 0 80px rgba(108,92,255,.6)}
+.center-badge h3{font-size:3rem;font-weight:800;line-height:1}
+.orbit-icon{position:absolute;width:58px;height:58px;border-radius:16px;background:var(--card);display:grid;place-items:center;font-size:1.6rem;box-shadow:0 10px 25px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.08)}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.features div{display:flex;gap:10px;align-items:center;background:var(--card);padding:14px;border-radius:12px;font-weight:500;font-size:.95rem}
+
+/* COURSES */
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filters button{background:var(--card);color:var(--text);border:1px solid rgba(255,255,255,.1);padding:10px 22px;border-radius:50px;cursor:pointer;font-family:inherit;font-weight:500;transition:.3s}
+.filters button.active,.filters button:hover{background:var(--grad);border-color:transparent}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.course{background:var(--card);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:.4s;border:1px solid rgba(255,255,255,.06)}
+.course::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:.4s;z-index:0}
+.course:hover{transform:translateY(-10px) rotate(-1deg);box-shadow:0 20px 40px rgba(108,92,255,.3)}
+.course:hover::before{opacity:.12}
+.course>*{position:relative;z-index:1}
+.course .ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:2rem;margin-bottom:18px;transition:.5s}
+.course:hover .ic{transform:rotateY(360deg) scale(1.1)}
+.course h3{font-size:1.2rem;margin-bottom:8px}
+.course p{color:var(--muted);font-size:.92rem}
+.course .tag{display:inline-block;margin-top:14px;font-size:.75rem;padding:4px 12px;border-radius:50px;background:rgba(0,212,255,.12);color:var(--p2);font-weight:600}
+.course.hide{display:none}
+
+/* WHY */
+.why{background:var(--bg2)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.why-card{text-align:center;padding:36px 24px;border-radius:20px;background:var(--card);transition:.3s}
+.why-card:hover{transform:scale(1.04)}
+.why-card .big{font-size:3rem;display:inline-block;animation:bounce 2.5s ease-in-out infinite}
+.why-card:nth-child(2) .big{animation-delay:.3s}.why-card:nth-child(3) .big{animation-delay:.6s}.why-card:nth-child(4) .big{animation-delay:.9s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.why-card h3{margin:14px 0 8px}
+.why-card p{color:var(--muted);font-size:.92rem}
+
+/* COUNTERS */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.counter{padding:30px;border-radius:20px;background:linear-gradient(145deg,rgba(108,92,255,.15),rgba(0,212,255,.08));border:1px solid rgba(108,92,255,.3)}
+.counter h3{font-size:2.6rem;font-weight:800}
+.counter p{color:var(--muted)}
+
+/* REVIEWS */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.review{background:var(--card);padding:30px;border-radius:20px;position:relative}
+.review::before{content:'"';position:absolute;top:-10px;right:24px;font-size:6rem;color:var(--p1);opacity:.3;font-family:serif}
+.stars{color:#fbbf24;margin-bottom:12px;letter-spacing:2px}
+.review p{font-style:italic;margin-bottom:16px}
+.review .who{display:flex;align-items:center;gap:12px;font-weight:600}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:700}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:30px}
+.info-card{background:var(--card);padding:32px;border-radius:20px}
+.info-row{display:flex;gap:16px;margin-bottom:24px}
+.info-row .ic{width:50px;height:50px;flex-shrink:0;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-size:1.3rem}
+.info-row h4{margin-bottom:2px}
+.info-row p,.info-row a{color:var(--muted)}
+.map{border-radius:20px;overflow:hidden;min-height:420px;border:2px solid rgba(108,92,255,.4);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(1.1)}
+
+footer{background:#070b18;padding:30px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* floating buttons */
+.wa{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:99;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulse-wa 2s infinite}
+@keyframes pulse-wa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+.wa svg{width:32px;fill:#fff}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(50px);transition:1s cubic-bezier(.2,.8,.2,1)}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .container,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-art{height:340px;order:-1}
+  .counters{grid-template-columns:1fr 1fr}
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:70%;flex-direction:column;background:var(--bg2);padding:90px 30px;transition:.4s}
+  .nav-links.open{right:0}
+  .menu-btn{display:block;z-index:101}
+  .features{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container">
+    <a href="#home" class="logo"><div class="logo-icon"><b>.</b></div><span>DOT<span class="grad-text">COM</span></span></a>
+    <ul class="nav-links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="particles"></canvas>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="container">
+    <div>
+      <div class="badge"><span class="dot"></span> Admissions Open: Onsite &amp; Online Batches</div>
+      <h1>We Create <span class="grad-text">Professionals</span><br>Learn <span class="typed" id="typed"></span></h1>
+      <p>For over 24 years, DOTCOM COMPUTER has been a leader in computer education in Gujarat. Practical, example-based training from experienced faculty in Paldi, Ahmedabad.</p>
+      <div class="hero-btns">
+        <a href="#courses" class="btn btn-primary">Explore Courses &rarr;</a>
+        <a href="tel:+919898069127" class="btn btn-ghost">Call 98980 69127</a>
+      </div>
+      <div class="hero-stats">
+        <div><h3 class="grad-text">24+</h3><p>Years of Excellence</p></div>
+        <div><h3 class="grad-text">4.9&#9733;</h3><p>Google Rating</p></div>
+        <div><h3 class="grad-text">15+</h3><p>Courses</p></div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5cff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4fa3"/><stop offset="1" stop-color="#6c5cff"/></linearGradient>
+        </defs>
+        <g class="orbit"><circle cx="300" cy="240" r="210" fill="none" stroke="url(#g1)" stroke-opacity=".3" stroke-dasharray="6 10"/>
+          <circle cx="510" cy="240" r="8" fill="#00d4ff"/><circle cx="90" cy="240" r="6" fill="#ff4fa3"/></g>
+        <!-- monitor -->
+        <g class="float-y">
+          <rect x="140" y="110" width="320" height="210" rx="16" fill="#161f3f" stroke="url(#g1)" stroke-width="4"/>
+          <rect x="155" y="125" width="290" height="180" rx="8" fill="#0b1020"/>
+          <circle cx="172" cy="140" r="5" fill="#ff5f57"/><circle cx="188" cy="140" r="5" fill="#febc2e"/><circle cx="204" cy="140" r="5" fill="#28c840"/>
+          <rect class="code-line" x="172" y="162" width="120" height="9" rx="4" fill="#6c5cff"/>
+          <rect class="code-line" style="animation-delay:.3s" x="190" y="182" width="170" height="9" rx="4" fill="#00d4ff"/>
+          <rect class="code-line" style="animation-delay:.6s" x="190" y="202" width="100" height="9" rx="4" fill="#ff4fa3"/>
+          <rect class="code-line" style="animation-delay:.9s" x="208" y="222" width="150" height="9" rx="4" fill="#22c55e"/>
+          <rect class="code-line" style="animation-delay:1.2s" x="190" y="242" width="80" height="9" rx="4" fill="#fbbf24"/>
+          <rect class="code-line" style="animation-delay:1.5s" x="172" y="262" width="60" height="9" rx="4" fill="#6c5cff"/>
+          <rect class="cursor-blink" x="240" y="260" width="4" height="14" fill="#fff"/>
+          <rect x="270" y="320" width="60" height="40" fill="#161f3f"/>
+          <rect x="220" y="358" width="160" height="12" rx="6" fill="url(#g1)"/>
+        </g>
+        <!-- floating chart card -->
+        <g class="float-y2">
+          <rect x="430" y="60" width="130" height="100" rx="14" fill="#161f3f" stroke="#00d4ff" stroke-opacity=".5"/>
+          <rect class="chart-bar" x="450" y="100" width="14" height="45" rx="3" fill="#6c5cff"/>
+          <rect class="chart-bar" style="animation-delay:.4s" x="472" y="85" width="14" height="60" rx="3" fill="#00d4ff"/>
+          <rect class="chart-bar" style="animation-delay:.8s" x="494" y="110" width="14" height="35" rx="3" fill="#ff4fa3"/>
+          <rect class="chart-bar" style="animation-delay:1.2s" x="516" y="78" width="14" height="67" rx="3" fill="#22c55e"/>
+          <text x="448" y="80" fill="#9aa6d1" font-size="11" font-family="Poppins">Excel</text>
+        </g>
+        <!-- code tag card -->
+        <g class="float-y3">
+          <rect x="30" y="80" width="120" height="70" rx="14" fill="url(#g2)"/>
+          <text x="90" y="125" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="monospace">&lt;/&gt;</text>
+        </g>
+        <!-- python / tally bubbles -->
+        <g class="float-y2"><rect x="40" y="330" width="130" height="56" rx="28" fill="#161f3f" stroke="#fbbf24"/>
+          <text x="105" y="364" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="600" font-family="Poppins">Python</text></g>
+        <g class="float-y"><rect x="430" y="340" width="140" height="56" rx="28" fill="#161f3f" stroke="#22c55e"/>
+          <text x="500" y="374" text-anchor="middle" fill="#22c55e" font-size="16" font-weight="600" font-family="Poppins">Tally GST</text></g>
+        <g class="float-y3"><circle cx="300" cy="50" r="26" fill="url(#g1)"/><text x="300" y="58" text-anchor="middle" fill="#fff" font-size="22" font-family="Poppins">&#9733;</text></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track" id="marquee">
+  <span>MS-Office ✦</span><span>Advanced Excel ✦</span><span>Tally Prime with GST ✦</span><span>C ✦</span><span>C++ ✦</span><span>Java ✦</span><span>Python ✦</span><span>Full-Stack Web Development ✦</span><span>Android ✦</span><span>Data Science ✦</span><span>Machine Learning ✦</span><span>Graphic Designing ✦</span><span>Social Media Marketing ✦</span>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-art reveal">
+      <div class="ring"></div><div class="ring r2"></div>
+      <div class="center-badge"><div><h3>24+</h3><p>Years</p></div></div>
+      <div class="orbit-icon float-y" style="top:2%;left:44%">💻</div>
+      <div class="orbit-icon float-y2" style="top:44%;right:-2%">📊</div>
+      <div class="orbit-icon float-y3" style="bottom:2%;left:44%">🐍</div>
+      <div class="orbit-icon float-y" style="top:44%;left:-2%">🎨</div>
+    </div>
+    <div class="about-text reveal">
+      <div class="sec-title" style="text-align:left;margin-bottom:20px"><span>About Us</span><h2>Shaping the <span class="grad-text">professionals of tomorrow</span></h2></div>
+      <p>Since 2000, DOTCOM COMPUTER has trained students and working professionals in Ahmedabad. We are committed to quality education that builds real skills and confidence.</p>
+      <p>Our experienced faculty give in-depth, practical knowledge in every course, with clear, example-based teaching and personal attention for every student.</p>
+      <div class="features">
+        <div>✅ Onsite &amp; Online Classes</div>
+        <div>✅ Personal Attention</div>
+        <div>✅ Practical Training</div>
+        <div>✅ Std. X &amp; XII Guidance</div>
+        <div>✅ Placement Support</div>
+        <div>✅ Parking Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-title reveal"><span>Our Courses</span><h2>Pick your <span class="grad-text">career path</span></h2></div>
+    <div class="filters reveal">
+      <button class="active" data-f="all">All</button>
+      <button data-f="office">Office &amp; Accounts</button>
+      <button data-f="prog">Programming</button>
+      <button data-f="data">Data &amp; AI</button>
+      <button data-f="design">Design &amp; Marketing</button>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <div class="sec-title reveal"><span>Why Choose Us</span><h2>Learning that <span class="grad-text">works</span></h2></div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="big">👨‍🏫</div><h3>Expert Faculty</h3><p>Clear, example-based teaching from experienced teachers.</p></div>
+      <div class="why-card reveal"><div class="big">🧪</div><h3>100% Practical</h3><p>Hands-on lab practice on every topic.</p></div>
+      <div class="why-card reveal"><div class="big">🕗</div><h3>Flexible Timings</h3><p>Batches from 8 AM to 8 PM, Monday to Saturday.</p></div>
+      <div class="why-card reveal"><div class="big">🏆</div><h3>Trusted Since 2000</h3><p>Rated 4.9★ by hundreds of students on Google.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container counters">
+    <div class="counter reveal"><h3 class="grad-text"><span data-count="24">0</span>+</h3><p>Years Experience</p></div>
+    <div class="counter reveal"><h3 class="grad-text"><span data-count="250">0</span>+</h3><p>Google Reviews</p></div>
+    <div class="counter reveal"><h3 class="grad-text"><span data-count="15">0</span>+</h3><p>Courses</p></div>
+    <div class="counter reveal"><h3 class="grad-text">4.<span data-count="9">0</span>★</h3><p>Average Rating</p></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-title reveal"><span>Testimonials</span><h2>What our <span class="grad-text">students say</span></h2></div>
+    <div class="reviews">
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Overall, it's the best place to learn computer skills and build confidence ✨</p><div class="who"><div class="avatar">K</div>Khushbu Barot</div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Good teaching, friendly environment, personal attention.</p><div class="who"><div class="avatar">D</div>Dashani Ravi</div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>Powerful practice and good work. My future is set 👍</p><div class="who"><div class="avatar">K</div>Krishi Shah</div></div>
+    </div>
+    <p style="text-align:center;margin-top:30px"><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dotcom+Computer+Paldi+Ahmedabad">Read all reviews on Google</a></p>
+  </div>
+</section>
+
+<!-- CONTACT + MAP -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-title reveal"><span>Visit Us</span><h2>Find us in <span class="grad-text">Paldi, Ahmedabad</span></h2></div>
+    <div class="contact-grid">
+      <div class="info-card reveal">
+        <div class="info-row"><div class="ic">📍</div><div><h4>Address</h4><p>309, Shree Sahjanand Plaza (above Hotel Utsav),<br>Paldi Bhatta, near SBI ATM, Paldi,<br>Ahmedabad, Gujarat 380007</p></div></div>
+        <div class="info-row"><div class="ic">📞</div><div><h4>Phone</h4><a href="tel:+919898069127">+91 98980 69127</a></div></div>
+        <div class="info-row"><div class="ic">🕗</div><div><h4>Timings</h4><p>Monday – Saturday: 8:00 AM – 8:00 PM<br>Sunday: Closed</p></div></div>
+        <div class="hero-btns">
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Dotcom+Computer+Paldi+Ahmedabad">Get Directions</a>
+          <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/919898069127?text=Hello%20DOTCOM%20COMPUTER%2C%20I%20want%20course%20details.">WhatsApp</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="DOTCOM COMPUTER location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Dotcom%20Computer%2C%20Shree%20Sahjanand%20Plaza%2C%20Paldi%2C%20Ahmedabad%20380007&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><b class="grad-text">DOTCOM COMPUTER</b>: We Create Professionals</p>
+    <p>© <span id="yr"></span> DOTCOM COMPUTER, Paldi, Ahmedabad. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919898069127?text=Hello%20DOTCOM%20COMPUTER%2C%20I%20want%20course%20details." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.2.6 4.4 1.7 6.3L3 29l7.2-1.9c1.8 1 3.9 1.5 5.9 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.3c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.3 1.1 1.1-4.2-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.3-11 10.3zm6-7.7c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+// courses
+const courses=[
+ {n:'MS-Office',i:'📝',c:'office',d:'Word, Excel, PowerPoint & Outlook for office work.',bg:'#2563eb'},
+ {n:'Advanced Excel',i:'📊',c:'office',d:'Formulas, Pivot Tables, Charts, Dashboards & MIS reports.',bg:'#16a34a'},
+ {n:'Tally Prime with GST',i:'🧾',c:'office',d:'Complete accounting with GST in 9 modules.',bg:'#ca8a04'},
+ {n:'C Programming',i:'🔤',c:'prog',d:'Logic building and programming fundamentals.',bg:'#475569'},
+ {n:'C++',i:'➕',c:'prog',d:'Object-oriented programming with C++.',bg:'#1d4ed8'},
+ {n:'Java',i:'☕',c:'prog',d:'Core Java and OOP concepts with projects.',bg:'#dc2626'},
+ {n:'Python',i:'🐍',c:'prog',d:'From basics to real projects in Python.',bg:'#0891b2'},
+ {n:'Full-Stack Web Development',i:'🌐',c:'prog',d:'HTML, CSS, JavaScript, backend & databases.',bg:'#7c3aed'},
+ {n:'Android Development',i:'📱',c:'prog',d:'Build and publish Android apps.',bg:'#65a30d'},
+ {n:'Data Science',i:'📈',c:'data',d:'Data analysis, visualisation & statistics.',bg:'#0d9488'},
+ {n:'Machine Learning',i:'🤖',c:'data',d:'Build smart ML models with Python.',bg:'#9333ea'},
+ {n:'Graphic Designing',i:'🎨',c:'design',d:'Photoshop, Illustrator & creative design.',bg:'#db2777'},
+ {n:'Social Media Marketing',i:'📣',c:'design',d:'Grow brands on Instagram, Facebook & more.',bg:'#ea580c'},
+ {n:'Std. X & XII Computer',i:'🎓',c:'office',d:'Expert guidance for computer subjects, all boards.',bg:'#0284c7'}
+];
+const grid=document.getElementById('courseGrid');
+const tags={office:'Office & Accounts',prog:'Programming',data:'Data & AI',design:'Design & Marketing'};
+grid.innerHTML=courses.map(c=>`<div class="course reveal" data-c="${c.c}"><div class="ic" style="background:${c.bg}33;box-shadow:0 0 25px ${c.bg}55">${c.i}</div><h3>${c.n}</h3><p>${c.d}</p><span class="tag">${tags[c.c]}</span></div>`).join('');
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+  document.querySelector('.filters .active').classList.remove('active');b.classList.add('active');
+  document.querySelectorAll('.course').forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f));
+});
+
+// typed effect
+const words=['Python','Tally Prime','Advanced Excel','Web Development','Data Science','Java'];
+let wi=0,ci=0,del=false;const t=document.getElementById('typed');
+(function type(){const w=words[wi];t.textContent=w.slice(0,ci);
+  if(!del&&ci++===w.length){del=true;return setTimeout(type,1500)}
+  if(del&&ci--===0){del=false;wi=(wi+1)%words.length}
+  setTimeout(type,del?50:100)})();
+
+// marquee duplicate
+const m=document.getElementById('marquee');m.innerHTML+=m.innerHTML;
+
+// nav
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
+const links=document.getElementById('links');
+document.getElementById('menuBtn').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('show');
+  e.target.querySelectorAll('[data-count]').forEach(el=>{const end=+el.dataset.count;let n=0;const s=Math.max(1,Math.ceil(end/60));
+    const iv=setInterval(()=>{n=Math.min(end,n+s);el.textContent=n;if(n>=end)clearInterval(iv)},25)});
+  io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// particles
+const cv=document.getElementById('particles'),ctx=cv.getContext('2d');let P=[];
+function rs(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;P=Array.from({length:Math.min(70,cv.width/18)},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6}))}
+rs();addEventListener('resize',rs);
+(function draw(){ctx.clearRect(0,0,cv.width,cv.height);
+  P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cv.width)p.vx*=-1;if(p.y<0||p.y>cv.height)p.vy*=-1;
+    ctx.fillStyle='rgba(0,212,255,.7)';ctx.beginPath();ctx.arc(p.x,p.y,2,0,7);ctx.fill();
+    for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){ctx.strokeStyle=`rgba(108,92,255,${1-d/120})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}});
+  requestAnimationFrame(draw)})();
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
